@@ -1,0 +1,33 @@
+{
+  "name": "animatum",
+  "version": "1.0.0",
+  "description": "A small JavaScript library for animating elements between states.",
+  "main": "dist/animatum.js",
+  "scripts": {
+    "build": "rollup -w -c ./rollup.config.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "animation",
+    "animate",
+    "css",
+    "easing",
+    "transition",
+    "transform",
+    "elements",
+    "states",
+    "capture"
+  ],
+  "author": "Owen Mills <owen23355@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "@babel/preset-typescript": "^7.3.3",
+    "jest": "^24.8.0",
+    "rollup": "^1.17.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "typescript": "^3.5.3",
+    "uglify-js": "^3.6.0"
+  }
+}

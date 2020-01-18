@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body>
+
+
+<div id="container" class="list-group">
+	<div class="list-group-item">item 1</div>
+	<div class="list-group-item">item 2</div>
+	<div class="list-group-item">item 3</div>
+	<div class="list-group-item">item 4</div>
+	<div class="list-group-item">item 5</div>
+	<div class="list-group-item">item 6</div>
+</div>
+
+<button id="btn">Reverse Order</button>
+
+</body>
+
+
+
+<script src="../dist/animatum.js"></script>
+
+<script type="text/javascript">
+	let container = document.getElementById('container');
+	let animatum = new Animatum(container, {
+		duration: 1000
+	});
+	document.getElementById('btn').addEventListener('click', () => {
+		// Save the "before state"
+		animatum.captureAllStates();
+
+		// Reverse the order of the elements
+		container.append(...Array.from(container.childNodes).reverse());
+
+		// Animate from the "before state" to the new state
+		animatum.animateAll();
+	});
+</script>
+</html>
