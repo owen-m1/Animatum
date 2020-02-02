@@ -1,4 +1,5 @@
-# Animatum
+<img src="https://user-images.githubusercontent.com/30704531/73602745-8800c300-4546-11ea-8ba8-fa5a15235ef0.png" width="355" />
+
 A small JavaScript library for animating elements between states.
 
 
@@ -30,7 +31,6 @@ container.append(...Array.from(container.childNodes).reverse());
 animatum.animate();
 ```
 
-[See in action](JSBIN LINK)
 
 ### API
 
