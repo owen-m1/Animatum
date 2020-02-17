@@ -1,6 +1,8 @@
 <img src="https://user-images.githubusercontent.com/30704531/73602745-8800c300-4546-11ea-8ba8-fa5a15235ef0.png" width="355" />
 
-A small JavaScript library for animating elements between states.
+A JavaScript library for animating elements between states
+
+Based on animation code of [SortableJS](https://github.com/SortableJS/Sortable)
 
 
 ### Getting Staterd
@@ -38,12 +40,12 @@ animatum.animateAll();
 To use Animatum you must first create an instance of Animatum on the container(s) whose children you want to animate. An optional [`options` object](#Options) object may also be passed to set the global options.
 
 `animatum.captureAllStates(options: Object)`
-Used to capture the animation states of *all* the children of the container(s).
+**Used to capture the animation states** of *all* the children of the container(s).
 This should be done immediatly before the DOM change that you want to animate takes place.
 An optional [`options` object](#Options) object may be passed to overwrite the global options.
 
 `animatum.animateAll(options: Object)`
-Used to animate from the captured animation state of all the children in the container(s) to their new state.
+**Used to animate from the captured animation states** of all the children in the container(s) to their new state.
 This should be done after the DOM changes you want to animate have taken place.
 An optional [`options` object](#Options) object may be passed to overwrite the global options.
 

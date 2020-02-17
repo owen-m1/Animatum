@@ -29,9 +29,6 @@ export default class Animatum {
 	captureState(element: AnimatingElement, options?: Options) {
 		options = Object.assign({}, this.options, options);
 		let rect = getRect(element);
-		if (!isWithinViewport(element, rect)) {
-			return;
-		}
 		this.animationStates.push({
 			element: element,
 			rect: rect
@@ -111,13 +108,6 @@ export default class Animatum {
 			}
 
 			element.toRect = toRect;
-
-			// If element is scrolled out of view: Do not animate
-			if (
-				!isWithinViewport(element, fromRect) ||
-				!isWithinViewport(element, animatingRect) ||
-				!isWithinViewport(element, toRect)
-			) return;
 
 
 			if (element.thisAnimationDuration) {
@@ -234,30 +224,6 @@ function matrix(element: HTMLElement) {
 	const matrixFn = window.DOMMatrix || window.WebKitCSSMatrix || window.CSSMatrix;
 	return matrixFn && (new matrixFn(element.style.transform));
 }
-
-
-function isWithinViewport(el: HTMLElement, elRect: Rect): boolean {
-	let parent = el.parentElement;
-
-	/* jshint boss:true */
-	while (parent) {
-		let parentRect = getRect(parent);
-
-		if (
-			parentRect.left > elRect.right ||
-			parentRect.right < elRect.left ||
-			parentRect.top > elRect.bottom ||
-			parentRect.bottom < elRect.top
-		) {
-			return false;
-		}
-
-		parent = parent.parentElement;
-	}
-
-	return true;
-}
-
 
 function getRect(element: Element): Rect {
 	let rect = element.getBoundingClientRect();
