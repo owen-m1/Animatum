@@ -22,13 +22,13 @@ let container = document.getElementById('container');
 let animatum = new Animatum(container);
 
 // Save the "before state"
-animatum.captureStates();
+animatum.captureAllStates();
 
 // Reverse the order of the elements
-container.append(...Array.from(container.childNodes).reverse());  
+container.append(...Array.from(container.childNodes).reverse());
 
 // Animate from the "before state" to the new state
-animatum.animate();
+animatum.animateAll();
 ```
 
 
