@@ -1,6 +1,6 @@
 {
   "name": "animatum",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A JavaScript library for animating elements between states",
   "main": "dist/animatum.js",
   "scripts": {
