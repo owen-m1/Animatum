@@ -21,6 +21,10 @@
   "files": [
     "dist/"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/owen-m1/Animatum.git"
+  },
   "author": "Owen Mills <owen23355@gmail.com>",
   "license": "MIT",
   "devDependencies": {
