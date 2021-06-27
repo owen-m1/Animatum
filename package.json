@@ -1,6 +1,6 @@
 {
   "name": "animatum",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A JavaScript library for animating elements between states",
   "main": "dist/animatum.js",
   "scripts": {
@@ -19,8 +19,8 @@
     "capture"
   ],
   "files": [
-		"dist/"
-	],
+    "dist/"
+  ],
   "author": "Owen Mills <owen23355@gmail.com>",
   "license": "MIT",
   "devDependencies": {
