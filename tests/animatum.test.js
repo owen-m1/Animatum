@@ -66,11 +66,4 @@ describe('Animation states', () => {
 			rect
 		});
 	});
-
-	it('should capture the position of all the elements', () => {
-		animatum.captureAllStates();
-
-		expect(animatum.animationStates).toEqual([].slice.call());
-	});
-
 });
