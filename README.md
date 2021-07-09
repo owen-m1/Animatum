@@ -44,7 +44,7 @@ To use Animatum you must first create an instance of Animatum on the container(s
 This should be done immediatly before the DOM change that you want to animate takes place.
 An optional [`options` object](#Options) object may be passed to overwrite the global options.
 
-`animatum.animateAll(options: Object)`
+`animatum.animateAll(callback: Function, options: Object)`
 **Used to animate from the captured animation states** of all the children in the container(s) to their new state.
 This should be done after the DOM changes you want to animate have taken place.
 An optional [`options` object](#Options) object may be passed to overwrite the global options.
